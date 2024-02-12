@@ -1,0 +1,43 @@
+body {
+  font-family: Helvetica;
+}
+
+.game {
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0.4) 100%
+    ),
+    url("https://i.ytimg.com/vi/IkymqrTs6AQ/maxresdefault.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  padding: 2em;
+}
+
+.game__cover {
+  align-self: center;
+}
+
+.game__cover img {
+  max-width: 100%;
+}
+
+.game__details {
+  padding: 1em;
+}
+
+.game__title {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+.btn {
+  text-decoration: none;
+  background-color: #6444a2;
+  display: inline-block;
+  padding: 0.5em;
+  color: white;
+  border-radius: 10px;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>IMD Meme generator</title>
+    <style>
+      body {
+        padding: 5em 10vw;
+      }
+
+      .app {
+        font-family: "Comic Sans Ms";
+      }
+
+      .app label {
+        display: block;
+        margin-top: 2em;
+      }
+
+      .editor {
+        margin-bottom: 2em;
+      }
+
+      .meme {
+        width: 400px;
+        border: 1px solid black;
+        position: relative;
+        font-size: 1.2em;
+        text-transform: uppercase;
+      }
+
+      #meme__toptext,
+      #meme__bottomtext {
+        position: absolute;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+      }
+
+      #meme__toptext {
+        top: 0;
+      }
+
+      #meme__bottomtext {
+        bottom: 0;
+      }
+
+      #meme__image {
+        max-width: 100%;
+        display: block;
+      }
+
+      .dark {
+        color: black;
+        text-shadow: -1px -1px 2px white;
+      }
+
+      .light {
+        color: white;
+        text-shadow: -1px -1px 2px black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="editor">
+        <h1>Meme Generator</h1>
+        <div>
+          <label for="image">Paste image URL here</label>
+          <input type="text" id="image" placeholder="Image URL goes here" />
+        </div>
+
+        <div>
+          <label for="toptext">Top text</label>
+          <input type="text" id="toptext" placeholder="" />
+        </div>
+
+        <div>
+          <label for="bottomtext">Bottom text</label>
+          <input type="text" id="bottomtext" placeholder="" />
+        </div>
+
+        <div>
+          <label for="color">Text color</label>
+          <select name="color" id="color">
+            <option value="dark">dark</option>
+            <option value="light">light</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="meme dark">
+        <h2 id="meme__toptext">Meme Top Text</h2>
+        <h2 id="meme__bottomtext">Meme Bottom Text</h2>
+        <img
+          src="https://placekitten.com/400/240"
+          id="meme__image"
+          alt="ROFL"
+        />
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
